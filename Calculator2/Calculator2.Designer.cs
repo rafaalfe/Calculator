@@ -223,6 +223,7 @@
             // 
             this.textBoxDisplay.Location = new System.Drawing.Point(133, 36);
             this.textBoxDisplay.Name = "textBoxDisplay";
+            this.textBoxDisplay.ReadOnly = true;
             this.textBoxDisplay.Size = new System.Drawing.Size(138, 22);
             this.textBoxDisplay.TabIndex = 16;
             // 
@@ -236,6 +237,7 @@
             this.Hasil});
             this.dataGridViewHistory.Location = new System.Drawing.Point(339, 36);
             this.dataGridViewHistory.Name = "dataGridViewHistory";
+            this.dataGridViewHistory.ReadOnly = true;
             this.dataGridViewHistory.RowHeadersWidth = 51;
             this.dataGridViewHistory.RowTemplate.Height = 24;
             this.dataGridViewHistory.Size = new System.Drawing.Size(313, 150);
@@ -246,6 +248,7 @@
             this.Operasi.HeaderText = "Operasi";
             this.Operasi.MinimumWidth = 6;
             this.Operasi.Name = "Operasi";
+            this.Operasi.ReadOnly = true;
             this.Operasi.Width = 84;
             // 
             // Hasil
@@ -253,6 +256,7 @@
             this.Hasil.HeaderText = "Hasil";
             this.Hasil.MinimumWidth = 6;
             this.Hasil.Name = "Hasil";
+            this.Hasil.ReadOnly = true;
             this.Hasil.Width = 67;
             // 
             // btn_clear
@@ -321,7 +325,7 @@
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(123, 26);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
