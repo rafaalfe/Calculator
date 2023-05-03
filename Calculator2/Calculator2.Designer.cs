@@ -67,7 +67,7 @@
             this.btn_1.TabIndex = 0;
             this.btn_1.Text = "1";
             this.btn_1.UseVisualStyleBackColor = true;
-            this.btn_1.Click += new System.EventHandler(this.btn_1_Click);
+            this.btn_1.Click += new System.EventHandler(this.btn_number_Click);
             // 
             // btn_2
             // 
@@ -77,7 +77,7 @@
             this.btn_2.TabIndex = 1;
             this.btn_2.Text = "2";
             this.btn_2.UseVisualStyleBackColor = true;
-            this.btn_2.Click += new System.EventHandler(this.btn_2_Click);
+            this.btn_2.Click += new System.EventHandler(this.btn_number_Click);
             // 
             // btn_3
             // 
@@ -87,7 +87,7 @@
             this.btn_3.TabIndex = 2;
             this.btn_3.Text = "3";
             this.btn_3.UseVisualStyleBackColor = true;
-            this.btn_3.Click += new System.EventHandler(this.btn_3_Click);
+            this.btn_3.Click += new System.EventHandler(this.btn_number_Click);
             // 
             // btn_4
             // 
@@ -97,7 +97,7 @@
             this.btn_4.TabIndex = 3;
             this.btn_4.Text = "4";
             this.btn_4.UseVisualStyleBackColor = true;
-            this.btn_4.Click += new System.EventHandler(this.btn_4_Click);
+            this.btn_4.Click += new System.EventHandler(this.btn_number_Click);
             // 
             // btn_5
             // 
@@ -107,7 +107,7 @@
             this.btn_5.TabIndex = 4;
             this.btn_5.Text = "5";
             this.btn_5.UseVisualStyleBackColor = true;
-            this.btn_5.Click += new System.EventHandler(this.btn_5_Click);
+            this.btn_5.Click += new System.EventHandler(this.btn_number_Click);
             // 
             // btn_6
             // 
@@ -117,7 +117,7 @@
             this.btn_6.TabIndex = 5;
             this.btn_6.Text = "6";
             this.btn_6.UseVisualStyleBackColor = true;
-            this.btn_6.Click += new System.EventHandler(this.btn_6_Click);
+            this.btn_6.Click += new System.EventHandler(this.btn_number_Click);
             // 
             // btn_7
             // 
@@ -127,7 +127,7 @@
             this.btn_7.TabIndex = 6;
             this.btn_7.Text = "7";
             this.btn_7.UseVisualStyleBackColor = true;
-            this.btn_7.Click += new System.EventHandler(this.btn_7_Click);
+            this.btn_7.Click += new System.EventHandler(this.btn_number_Click);
             // 
             // btn_8
             // 
@@ -137,7 +137,7 @@
             this.btn_8.TabIndex = 7;
             this.btn_8.Text = "8";
             this.btn_8.UseVisualStyleBackColor = true;
-            this.btn_8.Click += new System.EventHandler(this.btn_8_Click);
+            this.btn_8.Click += new System.EventHandler(this.btn_number_Click);
             // 
             // btn_9
             // 
@@ -147,7 +147,7 @@
             this.btn_9.TabIndex = 8;
             this.btn_9.Text = "9";
             this.btn_9.UseVisualStyleBackColor = true;
-            this.btn_9.Click += new System.EventHandler(this.btn_9_Click);
+            this.btn_9.Click += new System.EventHandler(this.btn_number_Click);
             // 
             // btn_0
             // 
@@ -157,7 +157,7 @@
             this.btn_0.TabIndex = 9;
             this.btn_0.Text = "0";
             this.btn_0.UseVisualStyleBackColor = true;
-            this.btn_0.Click += new System.EventHandler(this.btn_0_Click);
+            this.btn_0.Click += new System.EventHandler(this.btn_number_Click);
             // 
             // btn_equal
             // 
@@ -177,7 +177,7 @@
             this.btn_plus.TabIndex = 11;
             this.btn_plus.Text = "+";
             this.btn_plus.UseVisualStyleBackColor = true;
-            this.btn_plus.Click += new System.EventHandler(this.btn_plus_Click);
+            this.btn_plus.Click += new System.EventHandler(this.btn_operation_Click);
             // 
             // btn_minus
             // 
@@ -187,7 +187,7 @@
             this.btn_minus.TabIndex = 12;
             this.btn_minus.Text = "-";
             this.btn_minus.UseVisualStyleBackColor = true;
-            this.btn_minus.Click += new System.EventHandler(this.btn_minus_Click);
+            this.btn_minus.Click += new System.EventHandler(this.btn_operation_Click);
             // 
             // btn_mul
             // 
@@ -197,7 +197,7 @@
             this.btn_mul.TabIndex = 13;
             this.btn_mul.Text = "*";
             this.btn_mul.UseVisualStyleBackColor = true;
-            this.btn_mul.Click += new System.EventHandler(this.btn_mul_Click);
+            this.btn_mul.Click += new System.EventHandler(this.btn_operation_Click);
             // 
             // btn_div
             // 
@@ -207,7 +207,7 @@
             this.btn_div.TabIndex = 14;
             this.btn_div.Text = "/";
             this.btn_div.UseVisualStyleBackColor = true;
-            this.btn_div.Click += new System.EventHandler(this.btn_div_Click);
+            this.btn_div.Click += new System.EventHandler(this.btn_operation_Click);
             // 
             // label1
             // 
@@ -223,6 +223,7 @@
             // 
             this.textBoxDisplay.Location = new System.Drawing.Point(133, 36);
             this.textBoxDisplay.Name = "textBoxDisplay";
+            this.textBoxDisplay.ReadOnly = true;
             this.textBoxDisplay.Size = new System.Drawing.Size(138, 22);
             this.textBoxDisplay.TabIndex = 16;
             // 
@@ -236,6 +237,7 @@
             this.Hasil});
             this.dataGridViewHistory.Location = new System.Drawing.Point(339, 36);
             this.dataGridViewHistory.Name = "dataGridViewHistory";
+            this.dataGridViewHistory.ReadOnly = true;
             this.dataGridViewHistory.RowHeadersWidth = 51;
             this.dataGridViewHistory.RowTemplate.Height = 24;
             this.dataGridViewHistory.Size = new System.Drawing.Size(313, 150);
@@ -246,6 +248,7 @@
             this.Operasi.HeaderText = "Operasi";
             this.Operasi.MinimumWidth = 6;
             this.Operasi.Name = "Operasi";
+            this.Operasi.ReadOnly = true;
             this.Operasi.Width = 84;
             // 
             // Hasil
@@ -253,6 +256,7 @@
             this.Hasil.HeaderText = "Hasil";
             this.Hasil.MinimumWidth = 6;
             this.Hasil.Name = "Hasil";
+            this.Hasil.ReadOnly = true;
             this.Hasil.Width = 67;
             // 
             // btn_clear
@@ -267,12 +271,14 @@
             // 
             // comboBoxOperator
             // 
+            this.comboBoxOperator.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxOperator.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxOperator.FormattingEnabled = true;
             this.comboBoxOperator.Items.AddRange(new object[] {
-            "+",
-            "-",
-            "*",
-            "/"});
+            "Plus (+)",
+            "Minus (-)",
+            "Multiply (*)",
+            "Divide (/)"});
             this.comboBoxOperator.Location = new System.Drawing.Point(133, 64);
             this.comboBoxOperator.Name = "comboBoxOperator";
             this.comboBoxOperator.Size = new System.Drawing.Size(138, 24);
@@ -321,7 +327,7 @@
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(123, 26);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 

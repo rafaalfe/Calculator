@@ -32,7 +32,8 @@ namespace Calculator2
 
         }
 
-        private void btn_0_Click(object sender, EventArgs e)
+        #region Number Button
+        private void btn_number_Click(object sender, EventArgs e)
         {
             if (_operationPerformed)
             {
@@ -42,107 +43,9 @@ namespace Calculator2
             Button button = (Button)sender;
             textBoxDisplay.Text += button.Text;
         }
-
-        private void btn_1_Click(object sender, EventArgs e)
-        {
-            if (_operationPerformed)
-            {
-                textBoxDisplay.Clear();
-                _operationPerformed = false;
-            }
-            Button button = (Button)sender;
-            textBoxDisplay.Text += button.Text;
-        }
-
-        private void btn_2_Click(object sender, EventArgs e)
-        {
-            if (_operationPerformed)
-            {
-                textBoxDisplay.Clear();
-                _operationPerformed = false;
-            }
-            Button button = (Button)sender;
-            textBoxDisplay.Text += button.Text;
-        }
-
-        private void btn_3_Click(object sender, EventArgs e)
-        {
-            if (_operationPerformed)
-            {
-                textBoxDisplay.Clear();
-                _operationPerformed = false;
-            }
-            Button button = (Button)sender;
-            textBoxDisplay.Text += button.Text;
-        }
-
-        private void btn_4_Click(object sender, EventArgs e)
-        {
-            if (_operationPerformed)
-            {
-                textBoxDisplay.Clear();
-                _operationPerformed = false;
-            }
-            Button button = (Button)sender;
-            textBoxDisplay.Text += button.Text;
-        }
-
-        private void btn_5_Click(object sender, EventArgs e)
-        {
-            if (_operationPerformed)
-            {
-                textBoxDisplay.Clear();
-                _operationPerformed = false;
-            }
-            Button button = (Button)sender;
-            textBoxDisplay.Text += button.Text;
-        }
-
-        private void btn_6_Click(object sender, EventArgs e)
-        {
-            if (_operationPerformed)
-            {
-                textBoxDisplay.Clear();
-                _operationPerformed = false;
-            }
-            Button button = (Button)sender;
-            textBoxDisplay.Text += button.Text;
-        }
-
-        private void btn_7_Click(object sender, EventArgs e)
-        {
-            if (_operationPerformed)
-            {
-                textBoxDisplay.Clear();
-                _operationPerformed = false;
-            }
-            Button button = (Button)sender;
-            textBoxDisplay.Text += button.Text;
-        }
-
-        private void btn_8_Click(object sender, EventArgs e)
-        {
-            if (_operationPerformed)
-            {
-                textBoxDisplay.Clear();
-                _operationPerformed = false;
-            }
-            Button button = (Button)sender;
-            textBoxDisplay.Text += button.Text;
-        }
-
-        private void btn_9_Click(object sender, EventArgs e)
-        {
-            if (_operationPerformed)
-            {
-                textBoxDisplay.Clear();
-                _operationPerformed = false;
-            }
-            Button button = (Button)sender;
-            textBoxDisplay.Text += button.Text;
-        }
-
-        private void btn_plus_Click(object sender, EventArgs e)
+        #endregion
+        #region Operation Button
+        private void btn_operation_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             _operation = button.Text;
@@ -150,34 +53,8 @@ namespace Calculator2
             _operationPerformed = true;
             textBoxDisplay.Clear();
         }
-
-        private void btn_minus_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            _operation = button.Text;
-            _result = Convert.ToDouble(textBoxDisplay.Text);
-            _operationPerformed = true;
-            textBoxDisplay.Clear();
-        }
-
-        private void btn_mul_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            _operation = button.Text;
-            _result = Convert.ToDouble(textBoxDisplay.Text);
-            _operationPerformed = true;
-            textBoxDisplay.Clear();
-        }
-
-        private void btn_div_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            _operation = button.Text;
-            _result = Convert.ToDouble(textBoxDisplay.Text);
-            _operationPerformed = true;
-            textBoxDisplay.Clear();
-        }
-
+        #endregion
+        #region Equal_Operation
         private void btn_equal_Click(object sender, EventArgs e)
         {
             double num2 = Convert.ToDouble(textBoxDisplay.Text);
@@ -205,15 +82,6 @@ namespace Calculator2
             _operationPerformed = false;
         }
 
-        private void btn_clear_Click(object sender, EventArgs e)
-        {
-            textBoxDisplay.Clear();
-            dataGridViewHistory.Rows.Clear();
-            _result = 0;
-            _operation = "";
-            _operationPerformed = false;
-        }
-
         private void btn_op_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -224,26 +92,31 @@ namespace Calculator2
 
             switch (comboBoxOperator.SelectedItem.ToString())
             {
-                case "+":
+                case "Plus (+)":
                     _operation = "+";
                     break;
-                case "-":
+                case "Minus (-)":
                     _operation = "-";
                     break;
-                case "*":
+                case "Multiply (*)":
                     _operation = "*";
                     break;
-                case "/":
+                case "Divide (/)":
                     _operation = "/";
                     break;
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        #endregion
+        #region Clear Button
+        private void btn_clear_Click(object sender, EventArgs e)
         {
-
+            textBoxDisplay.Clear();
+            dataGridViewHistory.Rows.Clear();
+            _result = 0;
+            _operation = "";
+            _operationPerformed = false;
         }
-
         private void btn_c_Click(object sender, EventArgs e)
         {
             textBoxDisplay.Clear();
@@ -252,6 +125,11 @@ namespace Calculator2
             _operationPerformed = false;
         }
 
+        #endregion
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             /*SaveFileDialog saveFileDialog = new SaveFileDialog();
